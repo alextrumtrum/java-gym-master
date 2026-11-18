@@ -11,7 +11,6 @@ import java.util.Map;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-
 public class TimetableTest {
 
     private Timetable timetable;
@@ -25,7 +24,6 @@ public class TimetableTest {
         timetable = new Timetable();
     }
 
-
     @Test
     void testGetTrainingSessionsForDaySingleSession() {
         TrainingSession singleTrainingSession = new TrainingSession(childGroup, coach,
@@ -36,7 +34,6 @@ public class TimetableTest {
         assertIterableEquals(List.of(singleTrainingSession), getTrainingSessionList(timetable, DayOfWeek.MONDAY));
         assertIterableEquals(Collections.emptyList(), getTrainingSessionList(timetable, DayOfWeek.TUESDAY));
     }
-
 
     @Test
     void testGetTrainingSessionsForDayMultipleSessions() {
@@ -112,7 +109,6 @@ public class TimetableTest {
 
         assertEquals(Collections.emptyList(), timetable.getTrainingSessionsForDayAndTime(DayOfWeek.MONDAY,
             new TimeOfDay(13, 30)));
-
     }
 
     @Test
